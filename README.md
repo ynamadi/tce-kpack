@@ -1,4 +1,4 @@
-# Installing kpack on an ==Unmanaged Cluster== in ==Tanzu Community Edition (TCE)==
+## Installing kpack on an Unmanaged Cluster in Tanzu Community Edition (TCE)
 
 This page walks you through the following steps:
 
@@ -15,7 +15,7 @@ This page walks you through the following steps:
 brew install vmware-tanzu/tanzu/tanzu-community-edition
 ```
 
-## Step 2 - Create an Unmanaged Cluster using Tanzu Community Edition
+## Step 2 - Create an Unmanaged Cluster in TCE
 
 ```shell
 tanzu unmanaged-cluster create <CLUSTER_NAME>
@@ -107,11 +107,11 @@ This service account is used to reference the registry secret created in prerequ
 kubectl apply -f service-account.yaml
 ```
 
-## Step 5 - Build an OCI compliant image and Publish the image to your registry.
+## Step 5 - Build OCI Image and Publish
 
 The image.yaml manifest file defines your image source, builder and tag needed to build and publish your OCI image.   
 
-# Apply the image to your cluster
+### Apply the image to your cluster
 ```shell
     kubectl apply -f image.yaml
 ```
