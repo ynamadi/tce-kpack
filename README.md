@@ -39,14 +39,17 @@ tanzu package available list kpack.community.tanzu.vmware.com
 This is helpful in determining what values are required for the package to reconcile successfully. 
 
 ```shell
-tanzu package available get kpack.community.tanzu.vmware.com/<VERSION> --values-schema
+tanzu package available get \
+kpack.community.tanzu.vmware.com/<VERSION> --values-schema
 ```
 
 ### c. Installing Kpack package
 
 The command below installs kpack package on to your cluster
 ```shell
-tanzu package install kpack --package-name kpack.community.tanzu.vmware.com --version <VERSION> -f kpack/kpack-config-values.yaml
+tanzu package install kpack \
+--package-name kpack.community.tanzu.vmware.com \
+--version <VERSION> -f kpack/kpack-config-values.yaml
 ```
 
 ## Step 4 - Installing kpack-dependencies package.
@@ -64,14 +67,17 @@ tanzu package available list kpack-dependencies.community.tanzu.vmware.com
 This is helpful in determining what values are required for the package to reconcile successfully.
 
 ```shell
-tanzu package available get kpack-dependencies.community.tanzu.vmware.com/<VERSION> --values-schema
+tanzu package available get \
+kpack-dependencies.community.tanzu.vmware.com/<VERSION> --values-schema
 ```
 
 ### c. Installing Kpack package
 
 The command below installs kpack package on to your cluster
 ```shell
-tanzu package install kpack --package-name kpack-dependencies.community.tanzu.vmware.com --version <VERSION> -f kpack/kpack-config-values.yaml
+tanzu package install kpack \
+--package-name kpack-dependencies.community.tanzu.vmware.com \
+--version <VERSION> -f kpack/kpack-config-values.yaml
 ```
 
 ### d. Verify kpack-dependencies are installed on your cluster
