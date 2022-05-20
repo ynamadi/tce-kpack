@@ -1,4 +1,5 @@
-## Installing kpack on an Unmanaged Cluster in Tanzu Community Edition (TCE)
+## Using kpack package in Tanzu Community Edition (TCE)
+We will be going over using kpack to build OCI compliant images via a cluster created in TCE
 
 This page walks you through the following steps:
 
