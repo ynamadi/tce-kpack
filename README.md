@@ -31,7 +31,7 @@ Once the unmanaged cluster is created, you can now proceed to installing kpack a
 This is to determine the available kpack package versions available and the version you would like to install.
 
 ```shell
-    tanzu package available list kpack.community.tanzu.vmware.com
+tanzu package available list kpack.community.tanzu.vmware.com
 ```
 
 ### b. Check the value's schema for values needed to configure kpack
@@ -39,14 +39,14 @@ This is to determine the available kpack package versions available and the vers
 This is helpful in determining what values are required for the package to reconcile successfully. 
 
 ```shell
-  tanzu package available get kpack.community.tanzu.vmware.com/<VERSION> --values-schema
+tanzu package available get kpack.community.tanzu.vmware.com/<VERSION> --values-schema
 ```
 
 ### c. Installing Kpack package
 
 The command below installs kpack package on to your cluster
 ```shell
-  tanzu package install kpack --package-name kpack.community.tanzu.vmware.com --version <VERSION> -f kpack/kpack-config-values.yaml
+tanzu package install kpack --package-name kpack.community.tanzu.vmware.com --version <VERSION> -f kpack/kpack-config-values.yaml
 ```
 
 ## Step 4 - Installing kpack-dependencies package.
@@ -56,7 +56,7 @@ The command below installs kpack package on to your cluster
 This is to determine the available kpack package versions available and the version you would like to install.
 
 ```shell
-    tanzu package available list kpack-dependencies.community.tanzu.vmware.com
+tanzu package available list kpack-dependencies.community.tanzu.vmware.com
 ```
 
 ### b. Check the value's schema for values needed to configure kpack
@@ -64,28 +64,28 @@ This is to determine the available kpack package versions available and the vers
 This is helpful in determining what values are required for the package to reconcile successfully.
 
 ```shell
-  tanzu package available get kpack-dependencies.community.tanzu.vmware.com/<VERSION> --values-schema
+tanzu package available get kpack-dependencies.community.tanzu.vmware.com/<VERSION> --values-schema
 ```
 
 ### c. Installing Kpack package
 
 The command below installs kpack package on to your cluster
 ```shell
-  tanzu package install kpack --package-name kpack-dependencies.community.tanzu.vmware.com --version <VERSION> -f kpack/kpack-config-values.yaml
+tanzu package install kpack --package-name kpack-dependencies.community.tanzu.vmware.com --version <VERSION> -f kpack/kpack-config-values.yaml
 ```
 
 ### d. Verify kpack-dependencies are installed on your cluster
 
 ```shell
-    kubectl describe clusterstore -n default
+kubectl describe clusterstore -n default
 ```
 
 ```shell
-    kubectl describe clusterstack -n default
+kubectl describe clusterstack -n default
 ```
 
 ```shell
-    kubectl describe clusterbuilder -n default
+kubectl describe clusterbuilder -n default
 ```
 
 # Prerequisite Steps
@@ -94,7 +94,7 @@ The command below installs kpack package on to your cluster
 This is required to publish images to your registry
 
 ```shell
-    kubectl create secret docker-registry tutorial-registry-credentials \
+kubectl create secret docker-registry tutorial-registry-credentials \
 --docker-username=<USERNAME> \
 --docker-password=<PASSWORD> \
 --docker-server=<SERVER>
@@ -114,5 +114,5 @@ The image.yaml manifest file defines your image source, builder and tag needed t
 
 ### Apply the image to your cluster
 ```shell
-    kubectl apply -f image.yaml
+kubectl apply -f image.yaml
 ```
